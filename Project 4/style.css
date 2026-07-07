@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-section input:focus {
+    border-color: #007bff;
+}
+
+.input-section button {
+    padding: 10px 18px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-section button:hover {
+    background: #0056b3;
+}
+
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-left: 5px solid #007bff;
+}
+
+#taskList li span {
+    font-size: 16px;
+    color: #333;
+    word-break: break-word;
+    flex: 1;
+}
+
+#taskList li div {
+    display: flex;
+    gap: 8px;
+}
+
+#taskList button {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+#taskList button:first-child {
+    background: #28a745;
+}
+
+#taskList button:first-child:hover {
+    background: #218838;
+}
+
+#taskList button:last-child {
+    background: #dc3545;
+}
+
+#taskList button:last-child:hover {
+    background: #c82333;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    .input-section button {
+        width: 100%;
+    }
+
+    #taskList li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    #taskList li div {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
